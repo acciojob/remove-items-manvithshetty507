@@ -2,5 +2,7 @@
 function remove() {
 	const body = document.body;
 	let selectColor = body.querySelector("#colorSelect");
-	selectColor.selectedIndex = -1;
+	let selectedOption = selectColor.options[selectColor.selectedIndex];
+
+    selectColor.removeChild(selectedOption);
 }
